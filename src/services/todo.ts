@@ -1,3 +1,4 @@
+import { TodoSchemaType } from '~/schemas/todo';
 import { ListResponseType } from '~/types/core/response';
 import { MoveTodoType, TodoType } from '~/types/todo';
 
@@ -17,4 +18,16 @@ export async function moveTodo(payload: MoveTodoType) {
   if (!response.ok) throw new Error('Failed to move todo.');
 
   return;
+}
+
+export async function createTodo(payload: TodoSchemaType) {
+  const response = await fetch('/api/todos', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) throw new Error('Failed to create todo.');
+
+  return await response.json();
 }

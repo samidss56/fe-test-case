@@ -4,10 +4,9 @@ import { MoveTodoType, TodoAction } from '~/types/todo';
 import { getTodos, replaceTodos } from '../utils';
 
 export async function POST(request: NextRequest) {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
   const todos = await getTodos();
   const payload: MoveTodoType = await request.json();
+
   const { id, action } = payload;
 
   const index = _(todos).findIndex({ id });
