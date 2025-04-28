@@ -1,7 +1,9 @@
+import { TodoList } from '~/components/todos/list';
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-3xl font-semibold underline">Hello World!</h1>
+    <main className="min-h-screen flex justify-center py-12 px-4">
+      <TodoList />
     </main>
   );
 }
