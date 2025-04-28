@@ -25,14 +25,14 @@ export function TodoCreate() {
           <label htmlFor="title">Title</label>
           <input
             id="title"
-            className="border px-2 border-gray-300 w-full h-8"
+            className="border px-2 rounded-sm border-gray-300 w-full h-8"
             {...form.register('title')}
           />
 
           <label htmlFor="description">Description</label>
           <textarea
             id="description"
-            className="border px-2 border-gray-300 w-full"
+            className="border px-2 py-1 rounded-sm border-gray-300 w-full"
             {...form.register('description')}
           />
 
