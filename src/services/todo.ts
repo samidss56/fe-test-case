@@ -31,3 +31,14 @@ export async function createTodo(payload: TodoSchemaType) {
 
   return await response.json();
 }
+
+export async function removeTodo(id: string | number) {
+  const response = await fetch('/api/todos/' + id, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (!response.ok) throw new Error('Failed to create todo.');
+
+  return;
+}

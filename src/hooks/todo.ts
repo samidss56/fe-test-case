@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { createTodo, getTodos, moveTodo } from '~/services/todo';
+import { createTodo, getTodos, moveTodo, removeTodo } from '~/services/todo';
 
 export function useGetTodos() {
   const { data } = useQuery({
@@ -35,5 +35,19 @@ export function useCreateTodo() {
 
   return {
     create: mutate,
+  };
+}
+
+export function useRemoveTodo() {
+  const queryClient = useQueryClient();
+
+  const { mutate } = useMutation({
+    mutationKey: ['removeTodo'],
+    mutationFn: removeTodo,
+    onSuccess: () => queryClient.invalidateQueries(),
+  });
+
+  return {
+    remove: mutate,
   };
 }

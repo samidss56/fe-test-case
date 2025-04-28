@@ -1,27 +1,12 @@
 [
   {
-    "id": 1,
-    "title": "Todo 1",
-    "description": "Description for Todo 1"
+    "id": 1745831849703,
+    "title": "Todo saya",
+    "description": "Saya buat todo"
   },
   {
-    "id": 2,
-    "title": "Todo 2",
-    "description": "Description for Todo 2"
-  },
-  {
-    "id": 3,
-    "title": "Todo 3",
-    "description": "Description for Todo 3"
-  },
-  {
-    "id": 1745830654765,
-    "title": "Todo New",
-    "description": "New todo"
-  },
-  {
-    "id": 1745830674810,
-    "title": "Todo New",
-    "description": "New todo again"
+    "id": 1745831857431,
+    "title": "Todo baru",
+    "description": "todo baru banget"
   }
 ]
