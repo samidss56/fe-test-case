@@ -1,5 +1,10 @@
 'use client';
 
+import {
+  startTransition,
+  useDeferredValue,
+  unstable_ViewTransition as ViewTransition,
+} from 'react';
 import { useGetTodos, useMoveTodo } from '~/hooks/todo';
 import { TodoCard } from './card';
 
@@ -9,19 +14,27 @@ export function TodoList(_: TodoListProps) {
   const { todos } = useGetTodos();
   const { move } = useMoveTodo();
 
+  const deferredTodos = useDeferredValue(todos);
+
   return (
     <div className="max-w-[500px] w-full p-2 space-y-2 border border-gray-100">
-      {todos?.length === 0 ? (
+      {deferredTodos?.length === 0 ? (
         <div className="h-full flex items-center justify-center">
           <p>ℹ Tidak ada todo</p>
         </div>
       ) : (
-        todos?.map((todo) => (
-          <TodoCard
-            {...todo}
-            key={todo.id}
-            onTodoAction={(action) => move({ id: todo.id, action })}
-          />
+        deferredTodos?.map((todo) => (
+          <ViewTransition key={todo.id}>
+            <TodoCard
+              {...todo}
+              key={todo.id}
+              onTodoAction={(action) => {
+                startTransition(() => {
+                  move({ id: todo.id, action });
+                });
+              }}
+            />
+          </ViewTransition>
         ))
       )}
     </div>

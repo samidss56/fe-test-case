@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
       underscore: 'lodash',
     },
   },
+  experimental: {
+    viewTransition: true,
+  },
 };
 
 export default nextConfig;
