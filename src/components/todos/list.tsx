@@ -7,7 +7,7 @@ export interface TodoListProps {}
 
 export function TodoList(_: TodoListProps) {
   const { todos } = useGetTodos();
-  const { handleMoveTodo } = useMoveTodo();
+  const { move } = useMoveTodo();
 
   return (
     <div className="max-w-[500px] w-full p-2 space-y-2 border border-gray-100">
@@ -20,7 +20,7 @@ export function TodoList(_: TodoListProps) {
           <TodoCard
             {...todo}
             key={todo.id}
-            onTodoAction={(action) => handleMoveTodo(todo.id, action)}
+            onTodoAction={(action) => move(todo.id, action)}
           />
         ))
       )}

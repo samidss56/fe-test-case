@@ -26,6 +26,6 @@ export function useMoveTodo() {
   };
 
   return {
-    handleMoveTodo,
+    move: handleMoveTodo,
   };
 }
