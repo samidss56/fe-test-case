@@ -1,0 +1,14 @@
+import { readFile, writeFile } from 'fs/promises';
+import { TodoType } from '~/types/todo';
+
+const path = process.cwd() + '/src/app/api/todos/data.json';
+
+export async function getTodos(): Promise<TodoType[]> {
+  const file = await readFile(path, 'utf-8');
+  return JSON.parse(file);
+}
+
+export async function replaceTodos(todos: TodoType[]): Promise<void> {
+  const data = JSON.stringify(todos, null, 2);
+  await writeFile(path, data, 'utf-8');
+}

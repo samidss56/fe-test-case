@@ -1,12 +1,11 @@
 import { NextResponse } from 'next/server';
-import { TodoType } from '~/types/todo';
-
-const todos: TodoType[] = Array.from({ length: 3 }, (_, i) => {
-  const id = i + 1;
-  return { id, title: `Todo ${id}`, description: `Todo ${id} description` };
-});
+import { getTodos } from './utils';
 
 export async function GET() {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  const todos = await getTodos();
+
   return NextResponse.json({
     data: todos,
   });
