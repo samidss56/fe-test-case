@@ -20,7 +20,7 @@ export function TodoList(_: TodoListProps) {
           <TodoCard
             {...todo}
             key={todo.id}
-            onTodoAction={(action) => move(todo.id, action)}
+            onTodoAction={(action) => move({ id: todo.id, action })}
           />
         ))
       )}
