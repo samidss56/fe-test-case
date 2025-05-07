@@ -28,7 +28,10 @@ export function TodoList(_: TodoListProps) {
             <TodoCard
               {...todo}
               key={todo.id}
-              onTodoMove={(action) => move({ id: todo.id, action })}
+              /**
+               * @todo: Fix this error for onTodoMove
+               */
+              onTodoMove={move}
               onTodoRemove={remove}
             />
           </ViewTransition>

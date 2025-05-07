@@ -13,9 +13,11 @@ export function TodoCreate() {
   const { create } = useCreateTodo();
 
   const onSubmit = (data: TodoSchemaType) => {
-    create(data, {
-      onSuccess: () => form.reset(),
-    });
+    /**
+     * @todo: Add the functionality to reset the form if the todo is created successfully
+     */
+
+    create(data);
   };
 
   return (
