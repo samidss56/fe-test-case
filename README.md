@@ -7,7 +7,8 @@
 
 2. Fix the callback error for `onTodoMove` in `TodoList` component
 
-3. Add the validation for the title and the description in `todoSchema`. And you must shown up the error like in a `description`, `alert` or whatever
+3. Add the validation for the title and the description in `todoSchema`. And you must
+   shown up the error like in a `description`, `alert` or whatever
 
 - Title: required, min 3 characters, max 20 characters
 - Description: required, min 3 characters, max 100 characters
