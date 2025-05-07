@@ -21,4 +21,4 @@
 
 ##### Tips
 
-- Search `@todo` in your IDE for quickjumpt to the problems.
+- Search `@todo` in your IDE for quickjump to the problems.
