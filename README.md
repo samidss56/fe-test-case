@@ -1,6 +1,6 @@
-### gmt
+## gmt
 
-#### Main Tasks
+### Main Tasks
 
 1. Add the functionality to reset the form if the todo is created successfully
    in `TodoCreate` component
@@ -15,6 +15,10 @@
 4. Add the any loading ui if the todo's mutation is running, e.g. `create`
    `move` or `delete`,
 
-##### Additional Tasks (Optional)
+#### Additional Tasks (Optional)
 
 - Improve your styling to this project
+
+##### Tips
+
+- Search `@todo` in your IDE for quickjumpt to the problems.
