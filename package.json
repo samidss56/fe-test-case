@@ -1,13 +1,4 @@
 {
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "dotenv -e .env.development -- next dev --turbo",
-    "build": "dotenv -e .env.production -- next build",
-    "start": "dotenv -e .env.production -- next start",
-    "lint": "next lint",
-    "format": "prettier --write ."
-  },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@tanstack/react-query": "^5.74.7",
@@ -41,5 +32,14 @@
       "sharp",
       "unrs-resolver"
     ]
-  }
+  },
+  "private": true,
+  "scripts": {
+    "build": "dotenv -e .env.production -- next build",
+    "dev": "dotenv -e .env.development -- next dev",
+    "format": "prettier --write .",
+    "lint": "next lint",
+    "start": "dotenv -e .env.production -- next start"
+  },
+  "version": "0.1.0"
 }
