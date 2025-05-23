@@ -9,6 +9,13 @@ export async function POST(request: NextRequest) {
 
   const { id, action } = payload;
 
+  if (typeof id !== 'number') {
+    return NextResponse.json(
+      { errors: [{ details: 'Invalid id' }] },
+      { status: 400 },
+    );
+  }
+
   const index = _(todos).findIndex({ id });
   const swapIndex = action === TodoAction.MOVE_UP ? index - 1 : index + 1;
 
