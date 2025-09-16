@@ -1,3 +1,8 @@
+/**
+ * Do not edit this source code.
+ * Or, do it at your own risk.
+ */
+
 import { NextResponse } from 'next/server';
 import { todoSchema } from '~/schemas/todo';
 import { getTodos, replaceTodos } from './utils';

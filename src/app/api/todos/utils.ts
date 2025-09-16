@@ -1,3 +1,8 @@
+/**
+ * Do not edit this source code.
+ * Or, do it at your own risk.
+ */
+
 import { existsSync } from 'fs';
 import { readFile, writeFile } from 'fs/promises';
 import { TodoType } from '~/types/todo';

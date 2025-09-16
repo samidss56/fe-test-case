@@ -1,3 +1,8 @@
+/**
+ * Do not edit this source code.
+ * Or, do it at your own risk.
+ */
+
 import _ from 'lodash';
 import { NextRequest, NextResponse } from 'next/server';
 import { MoveTodoType, TodoAction } from '~/types/todo';

@@ -1,3 +1,8 @@
+/**
+ * Do not edit this source code.
+ * Or, do it at your own risk.
+ */
+
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { getTodos, replaceTodos } from '../utils';
