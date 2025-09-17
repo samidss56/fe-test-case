@@ -18,6 +18,7 @@ export function TodoCreate() {
      */
 
     create(data);
+    form.reset();
   };
 
   return (
@@ -30,13 +31,15 @@ export function TodoCreate() {
             className="border px-2 rounded-sm border-gray-300 w-full h-8"
             {...form.register('title')}
           />
+          <p className='text-red-500'>{form.formState.errors.title?.message}</p>
 
           <label htmlFor="description">Description</label>
           <textarea
             id="description"
             className="border px-2 py-1 rounded-sm border-gray-300 w-full"
             {...form.register('description')}
-          />
+            />
+            <p className='text-red-500'>{form.formState.errors.description?.message}</p>
 
           <div className="flex justify-end">
             <button
